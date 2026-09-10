@@ -1,0 +1,193 @@
+/* BASIC RESET
+   Removes default browser spacing*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* BODY */
+body {
+    /* Sets the font used on the webpage */
+    font-family: Arial, sans-serif;
+    /* Basic text color */
+    color: #333;
+    /* Light background */
+    background-color: #f4f6f8;
+}
+/* NAVIGATION BAR */
+.navbar {
+    /* Places logo and links in one row */
+    display: flex;
+    /* Keeps logo on left and links on right */
+    justify-content: space-between;
+    /* Aligns items vertically */
+    align-items: center;
+    /* Space inside the navbar */
+    padding: 15px 40px;
+    /* Dark navbar background */
+    background-color: #243b55;
+    /* Keeps navbar at the top */
+    position: sticky;
+    top: 0;
+    /* Makes navbar appear above other content */
+    z-index: 1000;
+}
+/* LOGO */
+.logo {
+    /* Logo text color */
+    color: white;
+    /* Makes logo bold */
+    font-weight: bold;
+    /* Logo size */
+    font-size: 24px;
+    /* Adds spacing between letters */
+    letter-spacing: 1px;
+}
+/* NAVIGATION LINKS */
+.nav-links {
+    /* Removes bullet points */
+    list-style: none;
+    /* Displays links horizontally */
+    display: flex;
+    /* Space between links */
+    gap: 25px;
+}
+/* Navigation link styling */
+.nav-links a {
+    /* Makes text white */
+    color: white;
+    /* Removes underline */
+    text-decoration: none;
+    /* Font size */
+    font-size: 16px;
+    /* Smooth color change */
+    transition: color 0.3s ease;
+}
+/* HOVER EFFECT */
+.nav-links a:hover {
+    /* Changes link color when mouse is over it */
+    color: #a9d6ff;
+}
+/* MOBILE MENU BUTTON */
+/*  The hamburger button is hidden on desktop.
+    It will be displayed inside the media query.*/
+.menu-toggle {
+    /* Hide button on large screens */
+    display: none;
+    /* Removes default button border */
+    border: none;
+    /* Transparent background */
+    background: transparent;
+    /* Shows pointer when hovering */
+    cursor: pointer;
+    /* Space around button */
+    padding: 5px;
+}
+/* HAMBURGER LINES */
+.menu-toggle span {
+    /* Each line has fixed width */
+    width: 28px;
+    /* Height of each line */
+    height: 3px;
+    /* White lines */
+    background-color: white;
+    /* Displays each line as block */
+    display: block;
+    /* Space between lines */
+    margin: 5px 0;
+    /* Makes animation smooth */
+    transition: 0.3s;
+}
+/* PAGE CONTENT */
+.content-section {
+    /* Minimum height for each section */
+    min-height: 400px;
+    /* Centers text */
+    text-align: center;
+    /* Space inside sections */
+    padding: 100px 20px;
+}
+/* Section headings */
+.content-section h1,
+.content-section h2 {
+    /* Adds space below heading */
+    margin-bottom: 15px;
+    /* Heading color */
+    color: #243b55;
+}
+/* Section paragraph */
+.content-section p {
+    /* Limits paragraph width */
+    max-width: 600px;
+    /* Centers paragraph */
+    margin: auto;
+    /* Improves readability */
+    line-height: 1.7;
+}
+/* MOBILE RESPONSIVE DESIGN */
+/*  When the screen width is 700px or smaller,
+    the desktop navigation changes into a mobile menu.*/
+@media (max-width: 700px) {
+    /* Reduce navbar padding */
+    .navbar {
+        padding: 15px 20px;
+    }
+    /* Show the hamburger button */
+    .menu-toggle {
+        display: block;
+    }
+    /* MOBILE NAVIGATION LINKS */
+    .nav-links {
+        /*    Position the menu below the navbar        */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        /* Dark background */
+        background-color: #243b55;
+        /* Stack links vertically */
+        flex-direction: column;
+        /* Center the links */
+        align-items: center;
+        /* Space between links */
+        gap: 0;
+        /*  Menu is hidden by default        */
+        display: none;
+    }
+    /*  JavaScript adds the "active" class
+        when the hamburger button is clicked.    */
+    .nav-links.active {
+        /* Shows the mobile menu */
+        display: flex;
+    }
+    /* Individual mobile navigation items */
+    .nav-links li {
+        /* Makes each item take full width */
+        width: 100%;
+        /* Centers text */
+        text-align: center;
+        /* Border between menu items */
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    /* Mobile navigation links */
+    .nav-links a {
+        /* Makes the complete area clickable */
+        display: block;
+        /* Adds space around the link */
+        padding: 15px;
+    }
+    /* HAMBURGER → X ANIMATION */
+    /*  When the menu is active, rotate the
+        first hamburger line.    */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    /*   Hide the middle hamburger line.    */
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    /*  Rotate the third line in the opposite direction.    */
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}

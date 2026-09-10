@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding -->
+    <meta charset="UTF-8">
+    <!-- Makes the webpage responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title shown on the browser tab -->
+    <title>Responsive Navigation Bar</title>
+    <!-- Connects the HTML file with the CSS file -->
+    <link rel="stylesheet" href="task-3.css">
+</head>
+<body>
+    <!--  NAVIGATION BAR -->
+    <nav class="navbar">
+        <!-- Website logo / name -->
+        <div class="logo">
+            ANJALI
+        </div>
+        <!-- Navigation links -->
+        <ul class="nav-links" id="navLinks">
+            <!-- Home link -->
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <!-- About link -->
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <!-- Services link -->
+            <li>
+                <a href="#services">Services</a>
+            </li>
+            <!-- Projects link -->
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <!-- Contact link -->
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+        <!-- MOBILE MENU BUTTON -->
+        <!--This button is visible only on smaller screens.
+            JavaScript will use it to open and close the menu.        -->
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+            <!-- Hamburger icon -->
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <!-- PAGE CONTENT
+         These sections are added so the navigation links
+         have somewhere to go. -->
+    <!-- Home Section -->
+    <section id="home" class="content-section">
+        <h1>Welcome to My Website</h1>
+        <p>
+            This is the home section of my website.
+        </p>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="content-section">
+        <h2>About Me</h2>
+        <p>
+            I am interested in web development and enjoy
+            creating simple and responsive websites.
+        </p>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="content-section">
+        <h2>Services</h2>
+        <p>
+            Web development, responsive design and
+            basic frontend development.
+        </p>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="content-section">
+        <h2>Projects</h2>
+        <p>
+            Portfolio website, CV card and other
+            web development projects.
+        </p>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="content-section">
+        <h2>Contact</h2>
+        <p>
+            Email: aanjalirai2006@gmail.com
+        </p>
+    </section>
+    <!-- Connects the JavaScript file -->
+    <script src="task-3.js"></script>
+</body>
+</html>
